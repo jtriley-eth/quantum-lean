@@ -1,7 +1,5 @@
 import Mathlib.Data.Matrix.Basic
 import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Vector.Basic
-import Mathlib.Data.Vector.Defs
 
 /-
 ## QubitGate
@@ -50,16 +48,3 @@ def TwoQubitGate : List (List ℂ) → Matrix (Fin 4) (Fin 4) ℂ
       | 3, 3 => p
       | _, _ => 0
   | _ => 0
-
-/-
-## Identity Gate
-
-The identity gate `I` performs no operation on the qubit state.
-
-I |ψ⟩ = |ψ⟩
-
--/
-def Identity := OneQubitGate [
-  [1, 0],
-  [0, 1]
-]
